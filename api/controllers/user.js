@@ -10,7 +10,7 @@ const createUser = (req, res) => {
       res.status(200).send(newUser);
     })
     .catch(err => {
-      res.json({ ...err });
+      res.status(200).send({ err });
     });
 };
 
