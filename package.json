@@ -25,6 +25,8 @@
     "express": "^4.16.2",
     "jsonwebtoken": "^8.1.0",
     "mongoose": "^4.13.7",
+    "mongoose-for-types": "^2.0.6",
+    "mongoose-types": "^1.0.3",
     "node-fetch": "^1.7.3"
   }
 }
