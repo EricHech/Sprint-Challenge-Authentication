@@ -7,10 +7,10 @@ const createUser = (req, res) => {
   user
     .save()
     .then(newUser => {
-      res.status(200).send(newUser);
+      res.status(201).send(newUser);
     })
     .catch(err => {
-      res.status(200).send({ err });
+      res.status(400).send({ err });
     });
 };
 
