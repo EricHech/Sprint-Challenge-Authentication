@@ -15,12 +15,12 @@ const login = (req, res) => {
               const payload = { username: user.username };
               const token = jwt.sign(payload, mysecret);
               res.json({ token });
-            } else res.status(422).json({ error: "passwords don't match" });
+            } else res.status(401).json({ error: "passwords don't match" });
           })
           .catch(err => {
             res.json({ errorCheckingPassword: err });
           });
-      } else res.status(422).json({ error: 'No user with that username in our DB' });
+      } else res.status(401).json({ error: 'No user with that username in our DB' });
     })
     .catch(err => {
       res.status(403).json({ error: 'Invalid Username/Password', ...err });
